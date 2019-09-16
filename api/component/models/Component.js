@@ -1,5 +1,7 @@
 'use strict';
 
+const axios = require('axios');
+
 /**
  * Lifecycle callbacks for the `Component` model.
  */
@@ -11,7 +13,9 @@ module.exports = {
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
-  // afterSave: async (model, response, options) => {},
+  afterSave: async (model, response, options) => {
+    axios.post('https://api.netlify.com/build_hooks/5d7fc4cc30bb954aeeea05de');
+  }
 
   // Before fetching a value.
   // Fired before a `fetch` operation.
@@ -20,7 +24,7 @@ module.exports = {
   // After fetching a value.
   // Fired after a `fetch` operation.
   // afterFetch: async (model, response, options) => {},
-  
+
   // Before fetching all values.
   // Fired before a `fetchAll` operation.
   // beforeFetchAll: async (model, columns, options) => {},
