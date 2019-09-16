@@ -1,0 +1,18 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-bookshelf",
+      "settings": {
+        "client": "postgres",
+        "database": "fabsite-strapi",
+        "host": "fabric-strapi.postgres.database.azure.com",
+        "port": 5432,
+        "username": "cmsadmin@fabric-strapi",
+        "password": "fabricadmin1!",
+        "ssl": true
+      },
+      "options": {}
+    }
+  }
+}
